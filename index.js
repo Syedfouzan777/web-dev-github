@@ -1,23 +1,18 @@
-// let newAnchorElement = document.createElement("a");
+let paragraph = document.querySelector("p");
 
-// let firstParagraph = document.querySelector("p");
+function changeParagraphText() {
+  paragraph.textContent = "Clicked !..";
+}
 
-// firstParagraph.append(newAnchorElement);
+paragraph.addEventListener("click", () => {
+  paragraph.textContent = "Clicked !..";
+});
 
-// newAnchorElement.href = "https://www.google.com";
-// newAnchorElement.textContent = "Click Here To Google";
+let inputElement = document.querySelector("input");
 
-// let newHeadingElement = document.createElement("h1");
-// newHeadingElement.textContent =
-//   "Allah is the greatest of All and Praise be to Allah";
+function retriveUserInput() {
+  let enteredText = inputElement.value;
+  console.log(enteredText);
+}
 
-// let headingElement = document.querySelector("p");
-
-// headingElement.append(newHeadingElement);
-
-// let headingElement = document.querySelector("h1");
-
-// headingElement.remove();
-
-let h1 = document.querySelector("h1");
-h1.parentElement.append(h1);
+inputElement.addEventListener("input",retriveUserInput);
